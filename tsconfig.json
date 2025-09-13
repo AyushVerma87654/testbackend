@@ -2,6 +2,12 @@
   "extends": "@adonisjs/tsconfig/tsconfig.app.json",
   "compilerOptions": {
     "rootDir": "./",
-    "outDir": "./build"
+    "outDir": "./build",
+    // Add or change these:
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2022", // or at least ES2015, but better newer
+    "lib": ["ES2022"], // include suitable lib
+    "skipLibCheck": true // optional; helps with type mismatches in node_modules
   }
 }
