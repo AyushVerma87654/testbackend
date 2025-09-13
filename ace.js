@@ -19,8 +19,7 @@
 /**
  * Register hook to process TypeScript files using ts-node
  */
-// ace.js
 import 'reflect-metadata'
-import { Ignitor } from '@adonisjs/core/build/standalone.js'
+import { Ignitor } from '@adonisjs/core'
 
-new Ignitor(__dirname).ace().catch(console.error)
+await new Ignitor(import.meta.url).ace()
